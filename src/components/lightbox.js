@@ -10,21 +10,52 @@ const LightboxContainer = styled.div`
 `
 
 export default class Lightbox extends Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      index: 0,
+    }
+
+    console.log(`constructor`)
+  }
+
   static propTypes = {
     carImages: PropTypes.array.isRequired,
   }
 
+  HoverIn(e, index) {
+    console.log(`HoverIn`)
+    console.log(index)
+    this.setState({ index: index })
+    console.log(this.state.index)
+  }
+
+  HoverOut(e, index) {
+    console.log(`HoverOut`)
+    console.log(index)
+    this.setState({ index: 0 })
+    console.log(this.state.index)
+  }
+
   render() {
+    console.log(`rendered`)
     const { carImages } = this.props
     return (
-      <LightboxContainer>
-        {carImages.map(image => (
-          <Img
-            key={image.node.childImageSharp.fluid.src}
-            fluid={image.node.childImageSharp.fluid}
-          />
-        ))}
-      </LightboxContainer>
+      <div>
+        <Img fluid={carImages[this.state.index].node.childImageSharp.fluid} />
+        <LightboxContainer>
+          {carImages.map((image, index) => (
+            <div
+              key={image.node.childImageSharp.fluid.src}
+              onMouseEnter={e => this.HoverIn(e, index)}
+              onMouseLeave={e => this.HoverOut(e, index)}
+            >
+              <Img fluid={image.node.childImageSharp.fluid} />
+            </div>
+          ))}
+        </LightboxContainer>
+      </div>
     )
   }
 }

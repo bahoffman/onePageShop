@@ -12,10 +12,9 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
+      <Cars />
       <BuyNow />
       <p>NZD $60.00</p>
-      <Cars />
     </div>
 
     <div>
