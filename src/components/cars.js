@@ -12,6 +12,8 @@ const Cars = () => (
               childImageSharp {
                 fluid(maxWidth: 2000) {
                   ...GatsbyImageSharpFluid
+                  srcWebp
+                  srcSetWebp
                 }
               }
             }
