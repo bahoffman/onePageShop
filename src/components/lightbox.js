@@ -31,7 +31,7 @@ export default class Lightbox extends Component {
     return (
       <div>
         <Img
-          style={{ border: "1px solid #021a40" }}
+          //style={{ border: "1px solid #021a40" }}
           fluid={carImages[this.state.index].node.childImageSharp.fluid}
         />
 
@@ -39,12 +39,19 @@ export default class Lightbox extends Component {
           {carImages.map((image, index) => (
             <div
               key={image.node.childImageSharp.fluid.src}
-              //onClick={e => this.ClickMe(e, index)}
               onClick={() => this.setState({ default: index })}
               onMouseEnter={() => this.setState({ index: index })}
               onMouseLeave={() => this.setState({ index: this.state.default })}
             >
-              <Img fluid={image.node.childImageSharp.fluid} />
+              <Img
+                style={{
+                  border:
+                    index == this.state.default
+                      ? "1px solid #021a40"
+                      : "1px solid transparent",
+                }}
+                fluid={image.node.childImageSharp.fluid}
+              />
             </div>
           ))}
         </LightboxContainer>
