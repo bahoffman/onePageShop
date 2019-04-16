@@ -10,7 +10,7 @@ const Cars = () => (
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 2000) {
+                fluid(maxWidth: 800) {
                   ...GatsbyImageSharpFluid
                   srcWebp
                   srcSetWebp
