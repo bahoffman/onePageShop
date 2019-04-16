@@ -17,26 +17,25 @@ export default class Lightbox extends Component {
       default: 0,
       index: 0,
     }
-
     console.log(`constructor`)
   }
 
   static propTypes = {
-    carImages: PropTypes.array.isRequired,
+    prodImages: PropTypes.array.isRequired,
   }
 
   render() {
     console.log(`rendered`)
-    const { carImages } = this.props
+    const { prodImages } = this.props
     return (
       <div>
         <Img
           //style={{ border: "1px solid #021a40" }}
-          fluid={carImages[this.state.index].node.childImageSharp.fluid}
+          fluid={prodImages[this.state.index].node.childImageSharp.fluid}
         />
 
         <LightboxContainer>
-          {carImages.map((image, index) => (
+          {prodImages.map((image, index) => (
             <div
               key={image.node.childImageSharp.fluid.src}
               onClick={() => this.setState({ default: index })}

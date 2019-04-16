@@ -38,11 +38,18 @@ module.exports = {
         cookieDomain: "example.com",
       },
     },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `images`,
+    //     path: `${__dirname}/src/images`,
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
+        name: `nagc`,
+        path: `${__dirname}/src/images/NAGC`,
       },
     },
     `gatsby-transformer-sharp`,
