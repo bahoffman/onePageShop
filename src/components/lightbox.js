@@ -45,7 +45,7 @@ export default class Lightbox extends Component {
               <Img
                 style={{
                   border:
-                    index == this.state.default
+                    index === this.state.default
                       ? "1px solid #021a40"
                       : "1px solid transparent",
                 }}
