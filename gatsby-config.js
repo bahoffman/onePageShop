@@ -3,17 +3,19 @@ module.exports = {
     title: `TOYO Cure Natural Aqua Gel`,
     description: `Hydrogen Activated Water Skin Exfoliator Suitable for All Skin Types (8.5 Ounce / 250 Milliliter)`,
     author: `@bbingllc`,
-    siteUrl: `https://priceless-beaver-8f05b4.netlify.com/`,
+    siteUrl: `https://my-gatsby-project.kiwiben.now.sh/`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sitemap`,
+    "gatsby-plugin-robots-txt",
     {
       resolve: `gatsby-plugin-styled-components`,
       options: {
         // Add any options here
       },
     },
+
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
@@ -48,8 +50,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `nagc`,
-        path: `${__dirname}/src/images/NAGC`,
+        name: `images`,
+        path: `${__dirname}/src/images/`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -63,7 +65,7 @@ module.exports = {
         background_color: `#663399`,
         theme_color: `#663399`,
         display: `minimal-ui`,
-        icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/images/site-icon.png`, // This path is relative to the root of the site.
       },
     },
     "gatsby-plugin-offline",

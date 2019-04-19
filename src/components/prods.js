@@ -6,11 +6,11 @@ const Product = () => (
   <StaticQuery
     query={graphql`
       query {
-        prodImages: allFile(filter: { sourceInstanceName: { eq: "nagc" } }) {
+        prodImages: allFile(filter: { relativeDirectory: { eq: "nagc" } }) {
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 800) {
+                fluid(maxWidth: 300) {
                   ...GatsbyImageSharpFluid
                   srcWebp
                   srcSetWebp
