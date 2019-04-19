@@ -14,7 +14,7 @@ const IndexPage = () => (
       <p>NZD $60.00</p>
     </div>
 
-    <div>
+    <div style={{ fontSize: `16px` }}>
       <h3>About the product</h3>
       <ul>
         <li>
@@ -63,14 +63,18 @@ const IndexPage = () => (
         preservative-free.{" "}
       </p>
       <ul>
-        <li>* Suitable for all skin types </li>
-        <li>
-          * Can be used on all your body * Can be applied on sensitive skin
+        <li style={{ margin: "0 0" }}>* Suitable for all skin types </li>
+        <li style={{ margin: "0 0" }}>* Can be used on all your body</li>
+        <li style={{ margin: "0 0" }}>* Can be applied on sensitive skin</li>
+        <li style={{ margin: "0 0" }}>* Gentle & effective </li>
+        <li style={{ margin: "0 0" }}>* Activated hydrogen water formula.</li>
+        <li style={{ margin: "0 0" }}>* Number 1 exfoliator in Japan</li>
+        <li style={{ margin: "0 0" }}>
+          * 91% of Cure Natural Aqua Gel is water
         </li>
-        <li>* Gentle & effective * Activated hydrogen water formula.</li>
-        <li>* Number 1 exfoliator in Japan</li>
-        <li>* 91% of Cure Natural Aqua Gel is water</li>
-        <li>* Scent-free, color-free, and preservative-free </li>
+        <li style={{ margin: "0 0" }}>
+          * Scent-free, color-free, and preservative-free{" "}
+        </li>
       </ul>
       <h3>How to use</h3>
       <p>
