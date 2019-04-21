@@ -6,8 +6,8 @@ import SEO from "../components/seo"
 
 const CancelPage = () => (
   <Layout>
-    <SEO title="Page two" />
-    <h1 style={{textAlign: "center"}}>PAYMENT CANCELED!</h1>
+    <SEO title="Cancel Page" />
+    <h1 style={{ textAlign: "center" }}>PAYMENT CANCELED!</h1>
     <p>
       Your transaction has been cancelled.The information you entered was not
       retained. You will not receive an email notificationL
