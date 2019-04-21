@@ -10,7 +10,7 @@ const Product = () => (
           edges {
             node {
               childImageSharp {
-                fluid(maxWidth: 300) {
+                fluid(maxWidth: 1000) {
                   ...GatsbyImageSharpFluid
                   srcWebp
                   srcSetWebp

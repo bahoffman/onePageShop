@@ -29,10 +29,7 @@ export default class Lightbox extends Component {
     const { prodImages } = this.props
     return (
       <div>
-        <Img
-          //style={{ border: "1px solid #021a40" }}
-          fluid={prodImages[this.state.index].node.childImageSharp.fluid}
-        />
+        <Img fluid={prodImages[this.state.index].node.childImageSharp.fluid} />
 
         <LightboxContainer>
           {prodImages.map((image, index) => (
