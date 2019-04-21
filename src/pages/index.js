@@ -3,15 +3,14 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import BuyNow from "../components/ppButton"
 import Products from "../components/prods"
-import { Tab, Tabs, TabList, TabPanel } from "react-tabs"
-import "react-tabs/style/react-tabs.css"
-
+import TabView from "../components/tabView"
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
 
     <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
       <Products />
+      <TabView />
       <BuyNow />
       <p>NZD $60.00</p>
     </div>
